@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="equestrian.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h1> Horse Training & Care Log</h1>
+        <div class="training-log">
+            <section class="card">
+                <h2> Add a Horse</h2>
+                <form id="name-form">
+                    <input class="name-input" type="text" placeholder="Horse Name" required />
+                    <button type="submit">Add</button>
+                </form>
+            </section>
+            <section class="card">
+                <h2>Add a Log</h2>
+
+
+                <form id="log-form">
+                    <div class="log-form-items">
+                    <label class="log-headings">
+                        Horse
+                    </label>
+                    <select id="horse-select" required></select>
+                    </div>
+
+                    
+                    <div class="log-form-items">
+                    <label class="log-headings">
+                        Date
+                    </label>
+                    <input class="log-date" type="date" required />
+                    </div>
+                    <div class="log-form-items">
+                    <label class="log-headings">
+                        Category
+                    </label>
+                    <select id="log-category" required>
+                        <option value="Training">Training</option>
+                        <option value="Care">Care</option>
+                    </select>
+                    </div>
+                    <div class="log-form-items">
+                    <label class="log-headings">
+                        Type
+                    </label>
+                    <select id="log-type" required>
+                        <option value="Lunge">Lunge</option>
+                        <option value="Flat">Flat</option>
+                        <option value="Jump">Jump</option>
+                        <option value="Hack">Hack</option>
+                        <option value="Walker">Walker</option>
+                        <option value="Treadmill">Treadmill</option>
+                        <option value="Dressage">Dressage</option>
+                        <option value="Farrier">Farrier</option>
+                        <option value="Vet">Vet</option>
+                        <option value="Physio">Physio</option>
+                        <option value="Chiro">Chiro</option>
+                        <option value="Dentist">Dentist</option>
+                    </select>
+                    </div>
+                    <div class="log-form-items">
+                    <label class="log-headings">
+                        Minutes
+                    </label>
+                    <input class="log-minutes" type="number" min="0" placeholder="e.g. 45" />
+                    </div>
+                    <div class="log-form-items">
+                    <label class="log-headings">
+                        Notes
+                    </label>
+                    <textarea class="log-notes" placeholder="Notes"></textarea>
+                    </div>
+                </form>
+                <button class="log-button" type="submit">Save Log</button>
+            </section>
+        </div>
+    </div>
+    <script src="equestrian.js"></script>
+</body>
+
+</html>

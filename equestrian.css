@@ -1,0 +1,55 @@
+ body {
+     min-height: 100vh;
+     background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-image: linear-gradient(rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25)), url("vecteezy_horses-and-foals-in-germany_10911233.jpg");
+ }
+
+ .container {
+     border: 2px solid red;
+     margin: 0 auto;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     max-width: 1200px;
+ }
+
+ h1 {
+     font-size: 40px;
+     text-align: center;
+ }
+
+ .training-log {
+    border: 2px solid plum;
+     display: flex;
+     flex-direction: column;
+     width: 400px;
+ }
+
+ h2 {
+     font-size: 30px;
+ }
+
+ #log-form {
+     display: flex;
+     flex-direction: column;
+ }
+
+ .log-form-items {
+    border: 2px solid yellow;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     
+ }
+
+ .log-headings {
+     font-size: 20px;
+     font-weight: bold;
+ }
+
+ .log-button {
+     border-radius: 10px;
+     padding: 10px;
+ }
