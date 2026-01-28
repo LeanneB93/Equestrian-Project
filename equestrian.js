@@ -1,23 +1,27 @@
 let names = JSON.parse(localStorage.getItem("names")) || [];
-let horses = JSON.parse(localStorage.getItem("horses")) || [];
 
 const nameForm = document.querySelector("#name-form");
 const nameInput = document.querySelector(".name-input");
-const horseSelect = document.querySelector("#horse-select");
+const selectDropdown = document.querySelector("#horse-select");
 
 nameForm.addEventListener("submit", (e) => {
-e.preventDefault();
+    e.preventDefault();
 
+    const name = nameInput.value.trim();
+    if (!name) return;
 
-const name = nameInput.value.trim();
-if (!name) return;
+    names.push(name);
+    localStorage.setItem("names", JSON.stringify(names));
 
-names.push(name);
-localStorage.setItem("names", JSON.stringify(names));
+    console.log(names);
 
-console.log(names);
-
-nameForm.reset();
+    nameForm.reset();
 });
 
+names.forEach(name => {
+    let option = document.createElement('option');
+    option.value = name;
+    option.text = name;
+    selectDropdown.add(option);
+});
 
