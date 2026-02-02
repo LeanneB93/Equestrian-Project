@@ -13,15 +13,19 @@ nameForm.addEventListener("submit", (e) => {
     names.push(name);
     localStorage.setItem("names", JSON.stringify(names));
 
+    names.forEach(name => {
+    let option = document.createElement('option')
+    option.value = name;
+    option.textContent = name;
+    selectDropdown.appendChild(option);
+    });
+
     console.log(names);
 
     nameForm.reset();
 });
 
-names.forEach(name => {
-    let option = document.createElement('option');
-    option.value = name;
-    option.text = name;
-    selectDropdown.add(option);
-});
+
+
+
 
