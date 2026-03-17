@@ -12,6 +12,16 @@ const minutesInput = document.querySelector('.log-minutes');
 const notesInput = document.querySelector('.log-notes');
 const saveLog = document.querySelector('.log-button');
 
+const addNameOption = (name) => {
+    let option = document.createElement('option')
+    option.value = name;
+    option.textContent = name;
+    selectDropdown.appendChild(option);
+};
+
+names.forEach(addNameOption);
+
+
 nameForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
@@ -21,17 +31,13 @@ nameForm.addEventListener("submit", (e) => {
     names.push(name);
     localStorage.setItem("names", JSON.stringify(names));
 
-        console.log(names);
+    console.log(names);
+
+    addNameOption(name);
 
     nameForm.reset();
 });
 
-    names.forEach(name => {
-        let option = document.createElement('option')
-        option.value = name;
-        option.textContent = name;
-        selectDropdown.appendChild(option);
-    });
 
 
 
