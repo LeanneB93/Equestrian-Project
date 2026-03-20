@@ -60,7 +60,6 @@ saveLog.addEventListener('click', () => {
     console.log("Saved logs:", logs);
 
     logForm.reset();
-
 });
 
 

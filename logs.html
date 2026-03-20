@@ -6,51 +6,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Logs</title>
     <link rel="stylesheet" href="equestrian.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Iosevka+Charon+Mono:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Lora:ital,wght@0,400..700;1,400..700&family=Rouge+Script&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <div class="logs-container">
-        <h1>Logs</h1>
-        <h2>Search</h2>
-        <div class="filter">
-            <select id="filter-horse">
-                <option value="">All Horses</option>
-            </select>
 
-            <select id="filter-category">
-                <option value="">All Categories</option>
-                <option value="Training">Training</option>
-                <option value="Care">Care</option>
-            </select>
+        <aside class="left-sidebar">
+            <div class="left-sidebar-top">
+                <img src="/Users/leannebrown/Documents/repos/Equestrian Project/vecteezy_horses-logo-design-vector-illustration_6627078_932/vecteezy_horses-logo-design-vector-illustration_6627078.jpg"
+                    alt="EquiLog logo" class="logo">
+                <div class="logo-text">
+                    <h1>EquiLog</h1>
+                    <p> Training & Logs</p>
+                </div>
+            </div>
+            <nav class="left-sidebar-nav">
+                <a href="homepage.html">Dashboard</a>
+                <a href="logs.html">Training Log</a>
+                <a href="#">Schedule</a>
+            </nav>
+        </aside>
+        <main class="log-info">
+            <div class="header">
+                <div class="header-text">
+                    <h1 class="training-log">Training Log</h1>
+                    <p class="log-text">Track and manage all training sessions</p>
+                </div>
+                <button class="log-button"> + Log Session</button>
+            </div>
+            <div class="form-card">
+                <form class="search-bar">
+                    <div class="input-group">
+                        <input type="search" id="search" placeholder=" " class="search-box" name="q" />
+                        <label for="search">Search Sessions</label>
+                    </div>
+                </form>
+                <label for="horse-dropdown" class="sr-only">Filter by horse</label>
+                <select id="horse-dropdown">
+                    <option value="">All horses</option>
+                </select>
+            </div>
+            <section class="horse-data">
+                <div class="horse-data-heading">
+                    <span class="horse-data-headers">Horse</span>
+                    <span class="horse-data-headers">Date</span>
+                    <span class="horse-data-headers">Activity</span>
+                    <span class="horse-data-headers">Duration</span>
+                    <span class="horse-data-headers">Rating</span>
+                    <span class="horse-data-headers">Notes</span>
+                </div>
+            </section>
+        </main>
 
-            <select id="filter-type">
-                <option value="Select">Select One</option>
-                <option value="Lunge">Lunge</option>
-                <option value="Flat">Flat</option>
-                <option value="Jump">Jump</option>
-                <option value="Hack">Hack</option>
-                <option value="Walker">Walker</option>
-                <option value="Treadmill">Treadmill</option>
-                <option value="Dressage">Dressage</option>
-                <option value="Farrier">Farrier</option>
-                <option value="Vet">Vet</option>
-                <option value="Physio">Physio</option>
-                <option value="Chiro">Chiro</option>
-                <option value="Dentist">Dentist</option>
-            </select>
-        </div>
+
+        <script src="logs.js"></script>
     </div>
-    <footer class="bottom-log-nav">
-        <a href="equestrian.html" class="nav-item">
-            <span class="material-symbols">Home</span>
-
-        </a>
-        <a href="logs.html" class="nav-item">
-            <span class="material-symbols">Logs</span>
-        </a>
-    </footer>
-    <script src="logs.js"></script>
 </body>
 
 </html>

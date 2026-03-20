@@ -14,8 +14,8 @@
 <body>
     <div class="app-layout">
 
-        <aside class="sidebar">
-            <div class="sidebar-top">
+        <aside class="left-sidebar">
+            <div class="left-sidebar-top">
                 <img src="/Users/leannebrown/Documents/repos/Equestrian Project/vecteezy_horses-logo-design-vector-illustration_6627078_932/vecteezy_horses-logo-design-vector-illustration_6627078.jpg"
                     alt="EquiLog logo" class="logo">
                 <div class="logo-text">
@@ -24,9 +24,9 @@
                 </div>
             </div>
 
-            <nav class="sidebar-nav">
-                <a href="#">Dashboard</a>
-                <a href="#">Training Log</a>
+            <nav class="left-sidebar-nav">
+                <a href="homepage.html">Dashboard</a>
+                <a href="logs.html">Training Log</a>
                 <a href="#">Schedule</a>
             </nav>
         </aside>
@@ -41,11 +41,10 @@
                 </div>
             </section>
             <section class="training-activity-card">
-                <h2 class="recent-activity">Recent Activity</h2>
+                <h3 class="recent-activity">Recent Activity</h3>
                 <div class="sessions-card">
                     <div class="sessions-logged">
                         <p class="sessions-logged-paragraph">No training sessions logged yet</p>
-                
                     </div>
                     <div class="view-training-logs">
                         <a href="#">View All Training Logs</a>
@@ -53,7 +52,23 @@
                 </div>
             </section>
         </main>
-
+        <aside class="right-sidebar">
+          <div class="schedule-card">
+            <h3 class="upcoming-schedule">Upcoming Schedule</h3>
+            <p class="schedule-paragraph">No upcoming events scheduled</p>
+          </div>
+        <button class="calendar-button">View Full Calendar</button>
+        <div class="actions-card">
+            <h3 class="quick-actions">Quick Actions</h3>
+            <button class="actions-button">Log Training Session</button>
+            <button class="actions-button">Add Health Record</button>
+            <button class="actions-button">Schedule Event</button>
+        </div>
+        <div class="health-alerts-card">
+            <h3 class="health-alerts">Health Alerts</h3>
+            <p class="health-alerts-paragraph">No health alerts at this time</p>
+        </div>
+        </aside>
         <script src="equestrian.js"></script>
     </div>
 </body>
