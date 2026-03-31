@@ -204,11 +204,11 @@
  .logs-container {
      border: 2px solid lime;
      display: grid;
-     grid-template-columns: 260px minmax(0, 1fr)
+     grid-template-columns: 260px minmax(0, 1fr);
+     min-height: 100vh;
  }
 
  .log-info {
-     border: 2px solid orange;
      width: 100%;
  }
 
@@ -220,13 +220,13 @@
      padding: 20px;
  }
 
- 
+
  .form-card {
      border: 1px solid hotpink;
      display: flex;
      gap: 50px;
      padding: 20px;
-     
+
 
  }
 
@@ -276,13 +276,13 @@
      padding: 0;
      margin: -1px;
      overflow: hidden;
-     clip rect (0, 0, 0, 0);
+     clip rect(0, 0, 0, 0);
      white-space: nowrap;
      border: 0;
  }
 
  #horse-dropdown {
-     width: clamp(100px, 22vw, 150px);
+     width: clamp(100px, 20vw, 150px);
      border: none;
      border-radius: 10px;
      color: white;
@@ -291,13 +291,100 @@
  }
 
  .horse-data-heading {
-    border: 1px solid lightblue;
-    display:flex;
-    justify-content: space-between;
-    margin-top: 60px;
-    padding: 20px;
+     border: 1px solid lightblue;
+     display: flex;
+     justify-content: space-around;
+     margin-top: 60px;
+     padding: 20px;
  }
 
  .horse-data-headers {
+     color: white;
+     font-weight: 600;
+ }
+
+ .modal-overlay {
+     position: fixed;
+     inset: 0;
+     background: rgba(0, 0, 0, 0.5);
+     display:
+     justify-content: center;
+     align-items: center;
+     z-index: 1000;
+ }
+
+ .modal-overlay.show {
+     display: flex;
+ }
+
+ .modal-card {
+     width: 600px;
+     background: rgba(255, 255, 255, 0.08);
+     backdrop-filter: blur(14px);
+     border-radius: 16px;
+     padding: 24px;
+     border: 1px solid rgba(255, 255, 255, 0.2);
+     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+     color: white;
+ }
+
+ .modal-form {
+     display: flex;
+     flex-direction: column;
+     gap: 16px;
+ }
+
+ .form-row {
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     border: 1px solid hotpink;
+     gap: 16px;
+ }
+
+ .form-group {
+     display: flex;
+     flex-direction: column;
+     gap: 6px;
+ }
+
+ .modal-form input,
+ .modal-form select,
+ .modal-form textarea {
+     padding: 12px;
+     border-radius: 10px;
+     border: 1px solid rgba(255, 255, 255, 0.2);
+     background: rgba(255, 255, 255, 0.08);
+     color: white;
+     font-size: 14px;
+     outline: none;
+ }
+
+ textarea {
+     min-height: 100px;
+     resize: vertical;
+ }
+
+ .modal-actions {
+     display: flex;
+     gap: 12px;
+     margin-top: 10px;
+ }
+
+ .save-training-button {
+     flex: 1;
+     background: orange;
+     border: none;
+     padding: 14px;
+     border-radius: 10px;
+     color: white;
+     font-weight: 600;
+ }
+ 
+ .cancel-training-button {
+    flex: 1;
+    background: rgba(255,255,255,0.1);
+    border: none;
+    padding: 14px;
+    border-radius: 10px;
     color: white;
  }

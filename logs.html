@@ -26,7 +26,7 @@
                 </div>
             </div>
             <nav class="left-sidebar-nav">
-                <a href="homepage.html">Dashboard</a>
+                <a href="dashboard.html">Dashboard</a>
                 <a href="logs.html">Training Log</a>
                 <a href="#">Schedule</a>
             </nav>
@@ -37,7 +37,7 @@
                     <h1 class="training-log">Training Log</h1>
                     <p class="log-text">Track and manage all training sessions</p>
                 </div>
-                <button class="log-button"> + Log Session</button>
+                <button class="log-button" id=""> + Log Session</button>
             </div>
             <div class="form-card">
                 <form class="search-bar">
@@ -62,10 +62,53 @@
                 </div>
             </section>
         </main>
-
-
-        <script src="logs.js"></script>
     </div>
+    <div class="modal-overlay" id="log-modal">
+            <div class="modal-card">
+
+
+                <form class="modal-form">
+                    <div class="form-row">
+                        <div class="form-group">
+
+                            <label for="horse-choices">Horse *</label>
+                            <select id="horse-choices" name="horse-choices">
+                                <option value="" disabled selected>Select a Horse</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="activity-choices">Activity *</label>
+                            <select id="activity-choices" name="activity-choices">
+                                <option value="" disabled selected>Select Activity</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="training-date">Date *</label>
+                            <input type="date" id="training-date" name="date-start">
+                        </div>
+                        <div class="form-group">
+                            <label for="training-duration">Duration *</label>
+                            <input type="text" id="training-duration" name="training">
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="notes">Notes *</label>
+                        <textarea id="notes" name="notes">Describe the session, progress, challenges etc.</textarea>
+                    </div>
+                    <div class="modal-actions">
+                        <button class="save-training-button">Save Session</button>
+                        <button class="cancel-training-button">Cancel</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    <script src="logs.js"></script>
 </body>
 
 </html>
