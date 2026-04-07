@@ -37,7 +37,7 @@
                     <h1 class="training-log">Training Log</h1>
                     <p class="log-text">Track and manage all training sessions</p>
                 </div>
-                <button class="log-button" id=""> + Log Session</button>
+                <button class="log-button" id="open-log-modal"> + Log Session</button>
             </div>
             <div class="form-card">
                 <form class="search-bar">
@@ -67,7 +67,7 @@
             <div class="modal-card">
 
 
-                <form class="modal-form">
+                <form class="modal-form" id="training-form">
                     <div class="form-row">
                         <div class="form-group">
 
@@ -101,8 +101,8 @@
                         <textarea id="notes" name="notes">Describe the session, progress, challenges etc.</textarea>
                     </div>
                     <div class="modal-actions">
-                        <button class="save-training-button">Save Session</button>
-                        <button class="cancel-training-button">Cancel</button>
+                        <button class="save-training-button" type="submit">Save Session</button>
+                        <button class="cancel-training-button" type="button">Cancel</button>
                     </div>
                 </form>
 
